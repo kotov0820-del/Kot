@@ -1,1 +1,2 @@
-# Kot
+[![Build status](https://ci.appveyor.com/api/projects/status/itkm08d8ypb2k2hn?svg=true)](https://ci.appveyor.com/project/Mr-A-S/web-testing-mirea)
+# Проект по тестированию веб-интерфейсов для МИРЭА. Сохрани файл.

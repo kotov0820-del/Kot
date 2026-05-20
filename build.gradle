@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    // Подключаем Selenide (он сам скачает нужные драйверы для браузера)
+    testImplementation 'com.codeborne:selenide:6.17.2'
+}
+
+test {
+    useJUnitPlatform()
+    // Настройки для запуска без графического интерфейса (нужно для GitHub/AppVeyor)
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless', 'false')
+}
